@@ -1,0 +1,38 @@
+en:
+  site:
+    title: "Creative Business Cup"
+    description: "Creative Business Cup"
+    url: "http://creativebusinesscup.com"
+    fb_image: ""
+  activerecord:
+    models:
+      event: The Event
+  editions: "Editions"
+  contact: "Contact"
+  press: "Press office"
+  schedule: "Schedule"
+  the_conference: "The Conference"
+  location_and_date: "2 and 3 of July in Fecomercio - SP"
+  info:
+    location: "Location"
+    share: "Share"
+    media: "Partners in the media"
+    diamond: "Diamond"
+    silver: "Silver"
+    bronze: "Bronze"
+    sponsors: "Sponsors"
+    presentation: "Presentation"
+    realization: "Realization"
+  speakers: "Speakers"
+  workshops: "Workshops"
+  videos: "Videos"
+  photos: "Photos"
+  presentations: "Presentations"
+  supporters: "Supporters"
+  commercialization: "Commercialization"
+  organization: "Organization"
+  descriptions:
+    contact:
+      text: "Is your company interested in sponsoring an international event for Open Innovation and Crowdsourcing?"
+    press:
+      text: ""

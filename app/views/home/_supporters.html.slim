@@ -1,0 +1,17 @@
+.supporters
+  .wrapper
+    h1 = t'supporters'
+    table
+      tbody
+        tr
+          td = link_to image_tag('infos/image_link_here.png'), 'http://link.me', target: "_blanck"
+
+    hr
+    .commercialization
+      h1 = t'commercialization'
+      = image_tag('infos/image.jpg')
+
+    .organization
+      h1 = t'organization'
+      = link_to image_tag('infos/image.jpg'), "http://link.me/", target: "_blanck"
+    .clear

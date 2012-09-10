@@ -1,0 +1,16 @@
+.wrapper#home
+  = render 'home/app'
+hr
+
+.wrapper#schedule
+  .schedule
+    = render 'schedules/index'
+    = render 'profiles/index'
+  = render 'home/infos'
+
+.clear
+/hr.sub
+
+/= render 'editions/index'
+
+= render 'home/supporters'

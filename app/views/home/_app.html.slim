@@ -1,0 +1,27 @@
+.home
+  .creative_business_cup
+    = image_tag("creative_business_cup.png", :class => 'ccs_logo') 
+    h1 = t'location_and_date'
+    .text = @the_event
+  .map
+    = image_tag("map.png", :class => 'main_map')
+  .clear
+  .infos_top
+    .realization
+      h2 = t'info.realization'
+      = link_to image_tag("realization.png", :class => 'realization_logo', style: "width: 175px"), "http://link.me/", target: "_blanck"
+    .sponsors
+      h2 = t'info.sponsors'
+      table
+        thead
+          tr
+            th
+              h3 = t'info.diamond'
+            td
+              h3 = t'info.silver'
+            th
+              h3 = t'info.bronze'
+        tbody
+          tr
+            td
+  .clear

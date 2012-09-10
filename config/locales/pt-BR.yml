@@ -1,0 +1,37 @@
+# Encoding: UTF-8
+pt-BR:
+  site:
+    title: "Creative Business Cup"
+    description: "Creative Business Cup"
+    url: "http://creativebusinesscup.com"
+    fb_image: ""
+  event: "O evento"
+  editions: "Edições"
+  contact: "Contato"
+  press: "Assessoria de imprensa"
+  schedule: "Programação"
+  the_conference: "A Conferência"
+  location_and_date: "2 e 3 de Julho na Fecomercio - SP"
+  info:
+    location: "Localização"
+    share: "Compartilhe"
+    media: "Parceiros na mídia"
+    diamond: "Diamante"
+    silver: "Prata"
+    bronze: "Bronze"
+    sponsors: "Patrocínio"
+    presentation: "Apresentação"
+    realization: "Realização"
+  speakers: "Palestrantes"
+  workshops: "Workshops"
+  videos: "Vídeos"
+  photos: "Fotos"
+  presentations: "Apresentações"
+  supporters: "Apoiadores"
+  commercialization: "Comercialização"
+  organization: "Organização"
+  descriptions:
+    contact:
+      text: "Sua empresa está interessada em patrocinar um evento internacional de Inovação Aberta e Crowdsourcing?"
+    press:
+      text: ""

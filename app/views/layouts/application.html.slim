@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title = t'site.title'
+    meta[property="og:title"        content="#{t 'site.title'}"]
+    meta[property="og:url"          content="#{t 'site.url'}"]
+    meta[property="og:description"  content="#{t 'site.description'}"]
+    meta[property="og:image"        content="#{t 'site.fb_image'}"]
+
+    link href=image_path('favicon.gif') rel="shortcut icon" type="image/gif"
+    link href='http://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag "application", :media => "all"
+    javascript:
+      var I18n = {"remove": "#{t('subscription.remove')}", "invalid_coupon": "#{t('subscription.invalid_coupon')}"};
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    = render "layouts/header"
+    = yield
+    = render "layouts/footer"
+    javascript:
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24579880-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
