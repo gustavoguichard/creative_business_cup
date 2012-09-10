@@ -15,6 +15,7 @@ test:
   username: postgres
   password: postgres
   host: 127.0.0.1
+  min_messages: WARNING
 
 production:
   adapter: postgresql
