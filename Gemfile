@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.8'
 
 #DB
 gem 'pg'
@@ -24,9 +24,6 @@ gem 'simple_form'
 gem 'auto_html'
 gem 'video_info'
 gem "formtastic", "~> 2.0.0"
-
-# Payment
-gem 'moip', :git => 'git://github.com/joaomilho/moip-ruby.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
