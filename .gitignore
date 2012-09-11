@@ -19,3 +19,4 @@
 config/database.yml
 db/schema.rb
 .sass-cache/
+.rvmrc
