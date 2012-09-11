@@ -28,3 +28,12 @@ Run the tests
 
 Start the Server
   `rails server`
+
+
+Enviroment variables
+-------------------------
+
+  `S3_BUCKET_NAME`
+  `AWS_ACCESS_KEY_ID`
+  `AWS_SECRET_ACCESS_KEY`
+
