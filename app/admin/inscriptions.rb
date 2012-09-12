@@ -1,6 +1,7 @@
 # Encoding: utf-8
 ActiveAdmin.register Inscription do
   index do
+    column :id
     column :name
     column :email
     column :company
@@ -61,6 +62,7 @@ ActiveAdmin.register Inscription do
     end
   end
 
+  filter :id
   filter :name
   filter :email
   filter :company
