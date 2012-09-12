@@ -33,7 +33,7 @@ pt-BR:
         ideia_business: "Como nasceu a ideia que originou o negócio?"
         site: "Site"
         video_url: "Vídeo pitch"
-        business_model: "Modelo de negócios"
+        business_model: "Modelo de negócio"
 
     # hints:
     #   username: 'User name to sign in.'
