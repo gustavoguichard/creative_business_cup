@@ -1,5 +1,5 @@
 CreativeBusinessCup::Application.routes.draw do
-  filter :locale
+  #filter :locale
   resources :videos, :only => [:show]
 
   ActiveAdmin.routes(self)
