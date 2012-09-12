@@ -12,13 +12,29 @@ pt-BR:
     error_notification:
       default_message: "Alguns erros foram encontrados, por favor dê uma olhada:"
     # Labels and hints examples
-    # labels:
+    labels:
     #   password: 'Password'
     #   user:
     #     new:
     #       email: 'E-mail para efetuar o sign in.'
     #     edit:
     #       email: 'E-mail.'
+      inscription:
+        name: "Nome"
+        age: "Idade"
+        email: "Email"
+        phone: "Telefone"
+        city_and_state: "Cidade / Estado"
+        address: "Endereço"
+        url: "URL própria"
+        experiences: "Experiências Anteriores"
+        company: "Nome da empresa"
+        what_do: "O que a empresa faz?"
+        ideia_business: "Como nasceu a ideia que originou o negócio?"
+        site: "Site"
+        video_url: "Vídeo pitch"
+        business_model: "Modelo de negócios"
+
     # hints:
     #   username: 'User name to sign in.'
     #   password: 'No special characters, please.'

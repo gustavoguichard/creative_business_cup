@@ -30,3 +30,7 @@ Video.blueprint do
   link {"https://vimeo.com/28220980"}
 end
 
+
+Inscription.blueprint do
+  # Attributes here
+end
