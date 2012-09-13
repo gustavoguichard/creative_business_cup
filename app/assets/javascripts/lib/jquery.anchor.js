@@ -11,7 +11,7 @@
 *****/
 
 $(function () {
-  $('.anchorLink').anchorAnimate({ topOffset: -100 });
+  $('a[href^=#][href!=#]').anchorAnimate({ topOffset: -100 });
 });
 
 jQuery.fn.anchorAnimate = function(settings) {

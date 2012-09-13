@@ -11,7 +11,7 @@ pt-BR:
   contact: "Contato"
   press: "Assessoria de imprensa"
   schedule: "Programação"
-  the_conference: "A Conferência"
+  national_roundup: "Etapa Nacional"
   location_and_date: "2 e 3 de Julho na Fecomercio - SP"
   info:
     location: "Localização"
@@ -33,6 +33,8 @@ pt-BR:
   organization: "Organização"
   descriptions:
     contact:
-      text: "Sua empresa está interessada em patrocinar um evento internacional de Inovação Aberta e Crowdsourcing?"
+      text: |
+        Sua empresa está interessada em patrocinar um evento internacional de
+        Inovação Aberta e Crowdsourcing?
     press:
       text: ""

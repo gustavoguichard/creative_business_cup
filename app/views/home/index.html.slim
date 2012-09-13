@@ -1,18 +1,20 @@
-.wrapper#home
-  = render 'home/app'
-hr
+section#home
+  = render 'home/intro'
 
-.wrapper#schedule
-  .schedule
-    = render 'schedules/index'
-    = render 'profiles/index'
-  = render 'home/infos'
+section#national
+  = render 'home/national'
+section#global
+  = render 'home/global'
 
-.wrapper#inscriptions
+  / .schedule
+  /   = render 'schedules/index'
+  /   = render 'profiles/index'
+  / = render 'home/infos'
+
+section#registration
   = render 'inscriptions/form'
-.clear
-/hr.sub
 
-/= render 'editions/index'
+section#downloads
+  = render 'editions/index'
 
-= render 'home/supporters'
+/ = render 'home/supporters'

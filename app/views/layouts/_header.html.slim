@@ -1,25 +1,22 @@
-.header
-  .wrapper
-    a.logo[href=root_url class=I18n.locale]
-      h1 Crowdsourcing Conference
-    .nav
-      .languages
-        = link_to "EN", root_path(locale: :en)
-        span
-        = link_to "PT", root_path(locale: "pt-BR")
-      ul
-        li = link_to "Home", "#home", class: "anchorLink"
-        li
-          span = t(:the_conference)
-          ul
-            li = link_to t(:schedule), "#schedule", class: "anchorLink"
-            li = link_to t("speakers"), "#profiles", class: "anchorLink speakers"
-            li = link_to t("workshops"), "#profiles", class: "anchorLink workshops"
-        /li = link_to t("subscription.subscription"), "#subscription", class: "anchorLink"
-        li = link_to t("info.location"), "#location", class: "anchorLink"
-        li = link_to "Blog", "http://conferenciacrowdsourcing.com/", target: "_blank"
-          /span = t(:editions)
-          /ul
-            /li = link_to 'CCS11', 'http://ccs11.conferenciacrowdsourcing.com.br'
-            /li = link_to 'CCS12', '#edition-creative_business_cup', class: "anchorLink"
-        li = link_to t(:contact), "#contact", class: "anchorLink"
+header
+  nav
+    ul.top-menu
+      li = link_to "Home", "#home", class: "anchorLink"
+      li.dropdown
+        span.drop-link Etapa Nacional
+        ul.sub-menu
+          li = link_to "Como funciona", "#national", data: {section: "how"}, class: "anchorLink"
+          li = link_to "Regras", "#national", data: {section: "rules"}, class: "anchorLink"
+          li = link_to "Critérios de Avaliação", "#national", data: {section: "evaluation"}, class: "anchorLink"
+          li = link_to "Prêmios", "#national", data: {section: "prizes"}, class: "anchorLink"
+          li = link_to "Calendário", "#national", data: {section: "calendar"}, class: "anchorLink"
+      li.dropdown
+        span.drop-link Global Award Show
+        ul.sub-menu
+          li = link_to "Como funciona", "#global", data: {section: "how"}, class: "anchorLink"
+          li = link_to "Critérios de Avaliação", "#global", data: {section: "evaluation"}, class: "anchorLink"
+          li = link_to "Prêmios", "#global", data: {section: "prizes"}, class: "anchorLink"
+          li = link_to "Calendário", "#global", data: {section: "calendar"}, class: "anchorLink"
+      li = link_to "Inscreva-se", "#registration", class: "anchorLink"
+      li = link_to "Downloads", "#downloads", class: "anchorLink"
+      li = link_to "Comitê Curador", "#committee", class: "anchorLink"
