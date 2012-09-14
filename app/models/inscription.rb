@@ -6,6 +6,7 @@ class Inscription < ActiveRecord::Base
   validates :site, :url, format: {with: URI::regexp(%w[http https]), allow_nil: true, allow_blank: true}
 
   has_attached_file :business_model, S3_CONF
+  validates :business_model, :attachment_presence => true
 
   before_post_process :rename_business_model
   def rename_business_model
