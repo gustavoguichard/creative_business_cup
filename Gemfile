@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'auto_html'
 gem 'video_info'
 gem "formtastic", "~> 2.0.0"
+gem 'rack-google-analytics'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

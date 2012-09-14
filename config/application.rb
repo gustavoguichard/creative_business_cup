@@ -73,5 +73,10 @@ module CreativeBusinessCup
     config.generators do |g|
       g.fixture_replacement :machinist
     end
+
+    # Google Analytics
+    if Rails.env.production?
+      config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-34824863-1'
+    end
   end
 end
