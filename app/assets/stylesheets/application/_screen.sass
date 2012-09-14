@@ -73,6 +73,46 @@ p
 .hidden
   display: none
 
+.info-area
+  +column(8)
+  background: white
+  padding: 15px 50px 30px
+  border: 1px solid darken($lightGray, 10%)
+  +border-radius(3px)
+  position: relative
+
+  &:after, &:before
+    content: ""
+    position: absolute
+    +include-image("tape")
+    left: 50%
+    margin-left: - sprites-sprite-width("tape")/2
+
+  &:before
+    top: -14px
+  &:after
+    bottom: -14px
+
+  article
+
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: $baseMargin
+      margin-top: $baseMargin*2
+
+  .info-menu
+    +horizontal-list
+    padding-top: $baseMargin
+
+    a
+      font-size: .9em
+      padding: 2px 6px
+
+    a:hover, li.active a
+      color: white
+
 // SECTION CLASSES
 // HEADER
 
@@ -180,46 +220,8 @@ p
 #national, #global
   padding: 50px 0
 
-.info-area
-  +column(8)
-  +offsetBy(3)
-  background: white
-  padding: 15px 50px 30px
-  border: 1px solid darken($lightGray, 10%)
-  +border-radius(3px)
-  position: relative
-
-  &:after, &:before
-    content: ""
-    position: absolute
-    +include-image("tape")
-    left: 50%
-    margin-left: - sprites-sprite-width("tape")/2
-
-  &:before
-    top: -14px
-  &:after
-    bottom: -14px
-
-  article
-
-    &:after
-      content: ""
-      display: block
-      width: 100%
-      height: $baseMargin
-      margin-top: $baseMargin*2
-
-  .info-menu
-    +horizontal-list
-    padding-top: $baseMargin
-
-    a
-      font-size: .9em
-      padding: 2px 6px
-
-    a:hover, li.active a
-      color: white
+  .info-area
+    +offsetBy(3)
 
 #national
   
@@ -237,7 +239,7 @@ p
     +colored-box($water)
 
 #global
-  padding-top: 90px
+  margin-top: 90px
   background: url(image_path("global_arrow.png")) no-repeat 90% 0
 
   .wrapper
@@ -252,3 +254,8 @@ p
 
   article:after
     +colored-box($eletricOrange)
+
+#registration
+
+  .info-area
+    +column(10)
