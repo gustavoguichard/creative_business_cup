@@ -1,21 +1,22 @@
-= simple_form_for(@inscription) do |f|
-  = f.error_notification
+.wrapper
+    = simple_form_for(@inscription) do |f|
+      = f.error_notification
 
-  .form-inputs
-    = f.input :name
-    = f.input :age
-    = f.input :email
-    = f.input :phone
-    = f.input :city_and_state
-    = f.input :address
-    = f.input :url
-    = f.input :experiences
-    = f.input :company
-    = f.input :what_do
-    = f.input :ideia_business
-    = f.input :site
-    = f.input :video_url
-    = f.input :business_model
+      .form-inputs
+        = f.input :name
+        = f.input :age
+        = f.input :email
+        = f.input :phone
+        = f.input :city_and_state
+        = f.input :address
+        = f.input :url
+        = f.input :experiences
+        = f.input :company
+        = f.input :what_do
+        = f.input :ideia_business
+        = f.input :site
+        = f.input :video_url
+        = f.input :business_model
 
-  .form-actions
-    = f.button :submit
+      .form-actions
+        = f.button :submit

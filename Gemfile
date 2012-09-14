@@ -41,6 +41,8 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "ffaker"
   gem "jasmine"
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end
 
 group :production do

@@ -1,2 +1,194 @@
+// COLOR VARS
+$baseGray: #555555
+$lightGray: #e9e9e9
+$water: #188a93
+$greeny: #a1b54f
+$lightGreeny: #b6cd59
+$hotPink: #9a0054
+$skyBlue: #92cee3
+$eletricOrange: #f08817
+$deepBlue: #2b5396
+$darkGreen: #515b27
+
+// OTHER VARS
+$spacing: 50px
+$baseMargin: 20px
+$bodyFontFamily: "PT Sans", sans-serif
+$headerFontFamily: "Quicksand", helvetica, sans-serif
+
+// SPRITES
+$sprites-layout: diagonal
+@import "sprites/*.png"
+$sprites: sprite-map("sprites/*.png")
+
+@mixin include-image($name)
+  +sprites-sprite($name)
+  +hide-text
+  display: block
+  width: sprites-sprite-width($name)
+  height: sprites-sprite-height($name)
+
+// MIXINS
+@mixin colored-box($color)
+  background: rgba($color, .7)
+  +box-shadow(0 0 2px rgba(black,.3), 0 0 5px rgba(black,.3) inset)  
+
+// GENERIC TAGS
 body
+  background: white url(image_path("body_bg.png"))
+  line-height: 1.4em
+  font-family: $bodyFontFamily
+  color: $baseGray
+
+h1, h2, h3, h4, h5
+  font-family: $headerFontFamily
+
+p
+  margin-bottom: $baseMargin
+  font-family: $bodyFontFamily
+  font-size: .9em
+
+// GENERIC CLASSES
+.button
+  +border-radius(3px)
+  +transition(all .2s)
+  font-size: 1.2em
+  padding: 15px
+  color: $darkGreen
+  +text-shadow(0 1px 0 rgba(white, .6))
+  border-color: darken($greeny, 10%)
+  +background-image(linear-gradient(top, $lightGreeny, $greeny))
+  +box-shadow(0 1px 1px rgba(black,.3), 0 1px 0 rgba(white, .5) inset)
+
+  &:hover
+    color: $darkGreen
+    +box-shadow(0 0 14px rgba(black,.2) inset, 0 0 4px rgba(black,.6), 0 1px 0 rgba(white, .5) inset)
+
+  &:active
+    +box-shadow(0 2px 4px rgba(black,.2) inset, 0 1px 0 white)
+
+.wrapper
+  +outerRow()
+
+.hidden
+  display: none
+
+// SECTION CLASSES
+// HEADER
+
+#menu
+
+  nav
+    +outerRow()
+    position: relative
+
+  .top-menu
+    position: absolute
+    top: 60px
+    right: 0
+    +horizontal-list
+    font-weight: bold
+    float: right
+    font-size: .85em
+
+    .anchorLink, .drop-link
+      padding: 2px 4px
+      cursor: pointer
+      color: $baseGray
+
+      &:hover
+        color: white
+        +colored-box($water)
+
+    .sub-menu
+      display: none
+      position: absolute
+
+#menu.top-attached
+  z-index: 200
+  position: fixed
+  top: 0
+  padding: 10px
+  width: 100%
+  +colored-box($water)
+
+  .top-menu
+    position: static
+    top: 0
+    color: white
+
+    .anchorLink, .drop-link
+      color: white
+      background: none
+      +box-shadow(none)
+      
+      &:hover
+        color: $baseGray
+
+// BODY
+
+#home
+  background: $lightGray url(image_path("home_bg.png"))
+  border-bottom: 8px solid $lightGray
+  +box-shadow(0 -4px 4px rgba(black,.1) inset)
+  margin-bottom: 30px
+
+  .wrapper
+    background: url(image_path("logo.png")) no-repeat fixed 140px 100px
+    padding: $spacing*3 0 $spacing*2
+
+  .logo_section
+    +column(5)
+    +hide-text
+    position: static
+
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      width: 300px
+      height: 20px
+      top: 0
+      +colored-box($water)
+
+  .home_intro
+    +column(7)
+    p
+      font-size: 1em
+
+#national, #global
+  padding: 50px 0
+
+.info-area
+  +column(9)
+  +offsetBy(2)
+  background: white
+  padding: 15px 50px 30px
+  border: 1px solid darken($lightGray, 10%)
+  +border-radius(3px)
+  position: relative
+
+  &:after, &:before
+    content: ""
+    position: absolute
+    +include-image("tape")
+    left: 50%
+    margin-left: - sprites-sprite-width("tape")/2
+
+  &:before
+    top: -14px
+  &:after
+    bottom: -14px
+
+  article
+
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 20px
+
+#national
   
+  article:after
+    +colored-box($water)

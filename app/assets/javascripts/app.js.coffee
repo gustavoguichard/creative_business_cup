@@ -11,4 +11,14 @@ App = Backbone.View.extend({
 })
 
 jQuery ->
+  document = $(window.document)
+  $menu = $('#menu')
+  $secondSection = $('#national')
   window.view = new App({el: $("body") });
+
+  $(document).scroll ->
+      sTop = document.scrollTop()
+      if(sTop >= $secondSection.offset().top - 30)
+        $menu.addClass('top-attached')
+      else
+        $menu.removeClass('top-attached')

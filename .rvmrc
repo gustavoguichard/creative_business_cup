@@ -1,1 +1,1 @@
-rvm --create 1.9.3@creative_business_cup
+rvm use 1.9.3@creative_business_cup --create
