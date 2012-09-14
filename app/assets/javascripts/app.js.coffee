@@ -18,7 +18,7 @@ jQuery ->
 
   $(document).scroll ->
       sTop = document.scrollTop()
-      if(sTop >= $secondSection.offset().top - 30)
+      if(sTop >= $secondSection.offset().top - 80)
         $menu.addClass('top-attached')
       else
         $menu.removeClass('top-attached')

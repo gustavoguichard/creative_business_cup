@@ -91,6 +91,9 @@ p
     float: right
     font-size: .85em
 
+    li
+      position: relative
+
     .anchorLink, .drop-link
       padding: 2px 4px
       cursor: pointer
@@ -98,11 +101,28 @@ p
 
       &:hover
         color: white
-        +colored-box($water)
+        +colored-box($deepBlue)
 
-    .sub-menu
-      display: none
-      position: absolute
+.sub-menu
+  display: none
+  position: absolute
+  top: 20px
+  left: 0
+  z-index: 40
+  background: white
+  padding: 5px
+
+  li
+    display: block !important
+    float: none !important
+
+    a
+      float: none
+      display: block
+
+.dropdown:hover
+  .sub-menu
+    display: block !important
 
 #menu.top-attached
   z-index: 200
@@ -147,9 +167,9 @@ p
       position: absolute
       display: block
       width: 300px
-      height: 20px
+      height: $baseMargin
       top: 0
-      +colored-box($water)
+      +colored-box($deepBlue)
 
   .home_intro
     +column(7)
@@ -160,8 +180,8 @@ p
   padding: 50px 0
 
 .info-area
-  +column(9)
-  +offsetBy(2)
+  +column(8)
+  +offsetBy(3)
   background: white
   padding: 15px 50px 30px
   border: 1px solid darken($lightGray, 10%)
@@ -186,9 +206,48 @@ p
       content: ""
       display: block
       width: 100%
-      height: 20px
+      height: $baseMargin
+      margin-top: $baseMargin*2
+
+  .info-menu
+    +horizontal-list
+    padding-top: $baseMargin
+
+    a
+      font-size: .9em
+      padding: 2px 6px
+
+    a:hover, li.active a
+      color: white
 
 #national
   
+  .wrapper
+    background: url(image_path("national_arrow.png")) no-repeat
+
+  a
+    color: $water
+
+  a:hover, li.active a
+    +colored-box($water)
+    color: white
+
   article:after
     +colored-box($water)
+
+#global
+  padding-top: 90px
+  background: url(image_path("global_arrow.png")) no-repeat 90% 0
+
+  .wrapper
+    background: url(image_path("global_logo.png")) no-repeat 0 100px
+
+  a
+    color: $eletricOrange
+
+  a:hover, li.active a
+    +colored-box($eletricOrange)
+    color: white
+
+  article:after
+    +colored-box($eletricOrange)
