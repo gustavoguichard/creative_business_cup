@@ -10,6 +10,7 @@ $eletricOrange: #f08817
 $calmOrange: #f47950
 $deepBlue: #2b5396
 $darkGreen: #515b27
+$calmRed: #fc7367
 
 // OTHER VARS
 $spacing: 50px
@@ -292,6 +293,26 @@ article
 
   form:after
     +colored-box($greeny)
+
+form
+  .field_with_errors
+    input
+      border: 1px solid $calmRed
+
+  .alert.alert-error, span.error
+    display: block
+    padding: 8px
+    margin-bottom: $baseMargin
+    color: white
+    background: $calmRed
+    +border-radius(3px)
+    font-weight: bold
+
+  span.error
+    position: relative
+    top: -14px
+    padding: 2px 8px
+    +border-radius(0 0 3px 3px)
 
 // DOWNLOADS
 
