@@ -1,13 +1,14 @@
 App = Backbone.View.extend({
   events:
-    "click .nav a.speakers": "active_speakers_tab",
-    "click .nav a.workshops": "active_workshops_tab"
+    "click .top-menu .dropdown .sub-menu a' ": "process"
 
-  active_speakers_tab: ->
-    $('.schedule .profiles a.talks_tab').click()
+  initialize: ->
+    _.bindAll(this)
 
-  active_workshops_tab: ->
-    $('.schedule .profiles a.workshops_tab').click()
+  process: (event)->
+    link = $(event.target)
+    section = link.parents('li.dropdown').data('section')
+    $("section##{section} .info-menu a.#{link.data('article')}").click()
 })
 
 jQuery ->
@@ -18,7 +19,7 @@ jQuery ->
 
   $(document).scroll ->
       sTop = document.scrollTop()
-      if(sTop >= $secondSection.offset().top - 80)
+      if(sTop >= $secondSection.offset().top - 100)
         $menu.addClass('top-attached')
       else
         $menu.removeClass('top-attached')

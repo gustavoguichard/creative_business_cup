@@ -1,10 +1,10 @@
 # Encoding: UTF-8
 pt-BR:
   site:
-    title: "Creative Business Cup"
-    description: "Creative Business Cup"
-    url: "http://creativebusinesscup.com"
-    fb_image: ""
+    title: "Creative Business Cup Brasil"
+    description: "Creative Business Cup faz parte da programação da Semana Global de Empreendedorismo e é uma iniciativa do governo Dinamarquês para fomentar o empreendedorismo criativo no mundo. É, portanto uma competição para empreendedores da indústria criativa ao redor do globo!"
+    url: "http://creativebusinesscupbrasil.com.br"
+    fb_image: "http://i.imgur.com/AlJNF.png"
   event: "O evento"
   inscription: "Inscrições"
   editions: "Edições"

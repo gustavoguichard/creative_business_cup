@@ -1,6 +1,4 @@
 CreativeBusinessCup::Application.routes.draw do
-  #filter :locale
-  resources :videos, :only => [:show]
   resources :inscriptions, :only => [:create] do
     member do
       get :export
