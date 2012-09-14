@@ -3,9 +3,9 @@ html
   head
     title = t'site.title'
     meta[property="og:title"        content="#{t 'site.title'}"]
-    meta[property="og:url"          content="#{t 'site.url'}"]
+    meta[property="og:url"          content="#{t('site.url').html_safe}"]
     meta[property="og:description"  content="#{t 'site.description'}"]
-    meta[property="og:image"        content="#{t 'site.fb_image'}"]
+    meta[property="og:image"        content="#{t('site.fb_image').html_safe}"]
 
     link href=image_path('favicon.gif') rel="shortcut icon" type="image/gif"
     link href='http://fonts.googleapis.com/css?family=PT+Sans|Quicksand:400,700' rel='stylesheet' type='text/css'
