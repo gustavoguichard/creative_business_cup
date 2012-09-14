@@ -154,13 +154,14 @@ p
   margin-bottom: 30px
 
   .wrapper
-    background: url(image_path("logo.png")) no-repeat fixed 140px 100px
     padding: $spacing*3 0 $spacing*2
 
   .logo_section
     +column(5)
-    +hide-text
     position: static
+
+    img
+      margin-top: -20px
 
     &:before
       content: ""
