@@ -12,13 +12,13 @@
                 = f.input :city_and_state
                 = f.input :address
                 = f.input :url
-                = f.input :experiences
+                = f.input :experiences, input_html: {rows: 4}
                 = f.input :company
-                = f.input :what_do
-                = f.input :ideia_business
+                = f.input :what_do, input_html: {rows: 4}
+                = f.input :ideia_business, input_html: {rows: 4}
                 = f.input :site
                 = f.input :video_url
                 = f.input :business_model
 
             .form-actions
-                = f.button :submit
+                = f.submit "Enviar", class: "button"
