@@ -2,11 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include AutoHtml
 
-  # before_filter do
-  #   if request.url =~ /creativebusinesscupbrasil\.com\.br/
-  #     raise "not yet!"
-  #   end
-  # end
+  before_filter do
+    if request.url =~ /creativebusinesscupbrasil\.com\.br/
+      raise "not yet!"
+    end
+  end
 
   def index_page
     @the_event = auto_html(Event.first.text){ html_escape; simple_format } rescue nil
