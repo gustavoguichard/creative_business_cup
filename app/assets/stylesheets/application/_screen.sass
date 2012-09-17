@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5
 p
   margin-bottom: $baseMargin
   font-family: $bodyFontFamily
-  font-size: .9em
+  font-size: 1em
 
 label
   font-weight: bold
@@ -283,6 +283,13 @@ article
 // INSCRICAO
 
 #registration
+  
+  a
+    color: $greeny
+
+  a:hover
+    +colored-box($greeny)
+    color: white
 
   .wrapper
     padding: 80px 0
@@ -318,8 +325,22 @@ form
 
 #downloads
   
+  a
+    color: $hotPink
+
+  a:hover
+    +colored-box($hotPink)
+    color: white
+  
   .wrapper
     background: url(image_path("downloads_arrow.png")) no-repeat right center
 
   article:after
     +colored-box($hotPink)
+
+// SPONSORS
+#sponsors
+  background: white
+  padding: 50px 0 30px
+  margin-top: 80px
+  border-top: 10px solid $calmOrange
