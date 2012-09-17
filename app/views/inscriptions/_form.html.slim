@@ -19,6 +19,10 @@
                 = f.input :site
                 = f.input :video_url
                 = f.input :business_model
+                p 
+                  | Não sabe como fazer um? 
+                  = link_to "Clique aqui", "#"
+                  |.
 
             .form-actions
                 = f.submit "Enviar", class: "button"
