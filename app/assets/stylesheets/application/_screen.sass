@@ -136,9 +136,16 @@ img
   cursor: pointer
   margin-bottom: $baseMargin
   background: url(image_path("upload.png")) no-repeat bottom left
+  position: relative
 
   input
     +opacity(0)
+
+  .error
+    position: absolute
+    left: 120px
+    top: 35px
+    +border-radius(3px)
 
 // SECTION CLASSES
 // HEADER
@@ -245,6 +252,12 @@ img
     +column(7)
     p
       font-size: 1em
+
+.social-img
+  float: right
+  margin: 5px
+  position: relative
+  top: -2px
 
 // RULES
 
