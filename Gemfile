@@ -44,6 +44,7 @@ group :development, :test do
   gem "jasmine"
   gem 'guard-livereload'
   gem 'rack-livereload'
+  gem 'quiet_assets'
 end
 
 group :production do

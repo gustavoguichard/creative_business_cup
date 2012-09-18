@@ -1,0 +1,8 @@
+.wrapper
+  - @committee.each do |curator|
+    div[class="#{cycle('odd', 'even')} curator"]
+      = image_tag "curators/#{curator[:image]}", class: "curator-img"
+      h3.curator-title
+        = curator[:name]
+      article.curator-text
+        = curator[:description]

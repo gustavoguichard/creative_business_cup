@@ -337,6 +337,60 @@ form
     padding: 2px 8px
     +border-radius(0 0 3px 3px)
 
+// COMMITTEE
+#committee
+  margin-bottom: 90px
+
+.curator
+  border: 1px solid darken($lightGray, 10%)
+  +border-radius(3px)
+  position: relative
+  +box-sizing(content-box)
+  padding: 15px
+  height: 205px
+  background: white url(image_path("curator_bubble.png")) no-repeat 200px 15px
+  +box-shadow(0 2px 2px rgba(black, .2))
+  width: 440px
+  margin-bottom: 40px
+
+  &.odd
+    clear: left
+    float: left
+
+  &.even
+    float: right
+
+  .curator-img
+    float: left
+    margin-right: 10px
+
+  .curator-title
+    margin-top: 90px
+
+  .curator-text
+    position: absolute
+    background: white
+    top: 10px
+    z-index: 10
+    height: 223px
+    padding-right: 10px
+    font-size: .9em
+    line-height: 1.6em
+    overflow: auto
+    +opacity(0)
+    +transition(opacity .5s)
+
+    &:hover, &:focus
+      +opacity(1)
+
+  &:before
+    content: ""
+    position: absolute
+    +include-image("tape")
+    left: 50%
+    margin-left: - sprites-sprite-width("tape")/2
+    top: -14px
+
 // DOWNLOADS
 
 #downloads
