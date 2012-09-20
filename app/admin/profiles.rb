@@ -5,8 +5,8 @@ ActiveAdmin.register Profile do
     column :position
     column "Type", :kind
     column :name
-    column :company
-    column :country
+    #column :company
+    #column :country
     default_actions
   end
 

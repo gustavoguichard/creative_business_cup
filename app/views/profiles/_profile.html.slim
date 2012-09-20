@@ -1,8 +1,6 @@
-.box
-  =image_tag(profile.avatar.url(:default), :class => "profile")
-  h4.name
+div[class="#{cycle('odd', 'even')} curator"]
+  = image_tag(profile.avatar.url(:default), :class => "curator-img")
+  h3.curator-title
     = profile.name
-    |  (#{profile.company})
-    |  – #{profile.country}
-  .bio
-    p = profile.bio
+  article.curator-text
+    = profile.bio

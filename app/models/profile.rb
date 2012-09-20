@@ -1,16 +1,15 @@
 class Profile < ActiveRecord::Base
-  KINDS = ["Speaker", "Workshop"]
+  KINDS = ["Curator"]
 
-  translates :bio, :country
+  translates :bio
   has_many :profile_translations
-  has_attached_file :avatar, {:styles => { default: "280x160>" }}.merge(S3_CONF)
-  validates :name, :company, :kind, presence: true
+  has_attached_file :avatar, {:styles => { default: "275x200>" }}.merge(S3_CONF)
+  validates :name, :kind, presence: true
   validates_attachment_presence :avatar
   accepts_nested_attributes_for :profile_translations, :allow_destroy => true
   after_initialize :build_translations
 
-  scope :speakers, where(kind: "Speaker")
-  scope :workshops, where(kind: "Workshop")
+  scope :curators, where(kind: "Curator")
   default_scope order: "position"
 
   protected

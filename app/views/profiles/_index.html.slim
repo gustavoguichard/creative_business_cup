@@ -1,17 +1,2 @@
-hr#profiles
-.profiles
-  a.talks_tab.selected = t'speakers'
-  a.workshops_tab = t'workshops'
-  a.go_top.anchorLink[href="#home"]
-
-  #speakers
-    - Profile.speakers.to_a.in_groups_of(2) do |s|
-      - for speaker in s
-        = render "profiles/profile", profile: speaker if speaker
-      .clear
-
-  #workshops
-    - Profile.workshops.to_a.in_groups_of(2) do |w|
-      - for workshop in w
-        = render "profiles/profile", profile: workshop if workshop
-      .clear
+.wrapper
+  = render @committee
