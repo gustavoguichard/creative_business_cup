@@ -9,8 +9,9 @@
       | Tem como propósito fortalecer as competências administrativas dos empreendedores “fora da caixa”, “loucos”, “inexperientes” ou como queira chamá-los . Nós acreditamos que esses “loucos” podem mudar o mundo e queremos ajuda-los, proporcionando visibilidade e treinamento Ao participar do CBC os empreendedores devem melhorar suas habilidades para iniciar start ups de sucesso baseadas em suas competências criativas.
     p
       | Os ganhadores da etapa local de cada país serão automaticamente selecionados para o Global Award Show em Novembro de 2012, durante a semana Global de Enpreendedorismo, em Copenhagen, Dinamarca, onde competirão com empreendedores selecionados nos demais países participantes.
-
-    a.button href="#registration" Inscreva-se
+    
+    - if resgistration?
+      a.button href="#registration" Inscreva-se
     
     a href="http://twitter.com/CBC_Brasil" target="_blank"
       = image_tag "twitter.png", class: "social-img"

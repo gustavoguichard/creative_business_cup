@@ -6,8 +6,9 @@ section#national
 section#global
   = render 'home/global'
 
-section#registration
-  = render 'inscriptions/form'
+- if resgistration?
+  section#registration
+    = render 'inscriptions/form'
 
 section#committee
   = render 'profiles/index'

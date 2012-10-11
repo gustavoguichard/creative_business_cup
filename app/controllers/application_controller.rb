@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include AutoHtml
 
+  helper_method :resgistration?
+
+  def resgistration?
+    Time.now < Time.local(2012, 10, 14, 12) # 2012-10-14 12:00
+  end
+
   def index_page
     @the_event = auto_html(Event.first.text){ html_escape; simple_format } rescue nil
     @committee = Profile.curators
