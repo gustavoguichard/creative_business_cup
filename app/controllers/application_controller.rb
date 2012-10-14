@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :resgistration?
 
   def resgistration?
-    Time.now < Time.local(2012, 10, 14, 12) # 2012-10-14 12:00
+    Time.now < Time.local(2012, 10, 15, 12) # 2012-10-14 12:00
   end
 
   def index_page
