@@ -14,7 +14,7 @@ App = Backbone.View.extend({
 jQuery ->
   document = $(window.document)
   $menu = $('#menu')
-  $secondSection = $('#national')
+  $secondSection = $('#finalists')
   window.view = new App({el: $("body") });
 
   $(document).scroll ->
