@@ -33,6 +33,7 @@ group :assets do
   gem 'compass-rails'
   gem 'zurb-foundation', '~> 3.0.9'
   gem "rails-backbone"
+  gem "semantic-mixins"
 end
 
 group :development, :test do
